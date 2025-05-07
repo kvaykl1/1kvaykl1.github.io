@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Великая Отечественная война (ВОВ)</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background-color: #eaeaea;
+            background-image: url('z13.jpg'); /* Укажите путь к вашему фоновому изображению */
+            background-size: cover; /* Покрывает весь фон */
+            background-position: center; /* Центрирует изображение на фоне */
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #FF6347 ;   /* блок сверху */
+            color: white;
+            padding: 15px 20px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .main-container {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 20px;
+            padding: 10px; 
+        }
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px; 
+            flex: 1;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.2s;
+        }
+        .custom-image {
+            width: 100%;
+            max-height: 60vh; 
+        }
+        .marker {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: #FF6347;  /* цвет метки */
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .tooltip {
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            display: none;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .text-container {
+            flex: 1;
+            padding: 20px;
+            background-color: rgba(192, 192, 192, 0.8); /* Полупрозрачный фон с 80% непрозрачностью */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow-y: auto; 
+            max-height: 40vh; 
+        }
+        .highlight {
+            background-color: #ff0000; 
+        }
+        .link {
+            color: #000000;/* ЦВЕТ ШРИФТА ю */
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        @media (min-width: 600px) { 
+            .main-container {
+                flex-direction: row; 
+            }
+            .image-container {
+                margin-right: 20px; 
+            }
+            .custom-image {
+                max-height: 80vh; 
+            }
+            .text-container {
+                max-height: none; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Значимые места в Брянской области во время Великой Отечественной войны (ВОВ)</h1>
+    </div>
+
+    <div class="main-container">
+        <div class="image-container" id="imageContainer">
+            <img src="z5.jpg" alt="Background Image" class="custom-image" id="image">
+            <div class="marker" style="top: 34%; left: 80%;" data-x="30" data-y="20" title="Перейти на страницу 1" onclick="openLink('Деревня Хацун.html')" data-marker="1" onmouseover="highlightText('text1')" onmouseout="unhighlightText('text1')">1</div>
+            <div class="marker" style="top: 48%; left: 25%;" data-x="50" data-y="50" title="Перейти на страницу 2" onclick="openLink('Лесной.html')" data-marker="2" onmouseover="highlightText('text2')" onmouseout="unhighlightText('text2')">2</div>
+            <div class="marker" style="top: 29%; left: 75%;" data-x="30" data-y="70" title="Перейти на страницу 3" onclick="openLink('Озеро Круглое.html ')" data-marker="3" onmouseover="highlightText('text3')" onmouseout="unhighlightText('text3')">3</div>
+            <div class="marker" style="top: 30%; left: 78%;" data-x="30" data-y="60" title="Перейти на страницу 4" onclick="openLink('Урочище.html')" data-marker="4" onmouseover="highlightText('text4')" onmouseout="unhighlightText('text4')">4</div>
+            <div class="marker" style="top: 35%; left: 78%;" data-x="19" data-y="30" title="Перейти на страницу 5" onclick="openLink('водителям.html')" data-marker="5" onmouseover="highlightText('text5')" onmouseout="unhighlightText('text5')">5</div>
+            <div class="marker" style="top: 54%; left: 24%;" data-x="50" data-y="50" title="Перейти на страницу 6" onclick="openLink('речечка.html')" data-marker="6" onmouseover="highlightText('text6')" onmouseout="unhighlightText('text6')">6</div>
+            <div class="marker" style="top: 25%; left: 76%;" data-x="20" data-y="70" title="Перейти на страницу 7" onclick="openLink('Сеща1.html')" data-marker="7" onmouseover="highlightText('text7')" onmouseout="unhighlightText('text7')">7</div>
+            <div class="marker" style="top: 20%; left: 61%;" data-x="50" data-y="50" title="Перейти на страницу 8" onclick="openLink('Жуковка1.html')" data-marker="8" onmouseover="highlightText('text8')" onmouseout="unhighlightText('text8')">8</div>
+            <div class="marker" style="top: 30%; left: 80%;" data-x="20" data-y="70" title="Перейти на страницу 9" onclick="openLink('Белые Берега.html')" data-marker="9" onmouseover="highlightText('text9')" onmouseout="unhighlightText('text9')">9</div>
+            <div class="marker" style="top: 68%; left: 65%;" data-x="50" data-y="50" title="Перейти на страницу 10" onclick="openLink('Суземка.html')" data-marker="10" onmouseover="highlightText('text10')" onmouseout="unhighlightText('text10')">10</div>
+            <div class="tooltip" id="tooltip"></div>
+        </div>
+
+        <div class="text-container">
+            <h2>Места</h2>
+            <p>Великая Отечественная война — война СССР против вторгшихся на его территорию нацистской Германии и её союзников. Длилась с 22 июня 1941 по 9 мая 1945.</p>
+            <p id="text1" class="link" onclick="openLink('Деревня Хацун.html')"><strong>1:</strong> Деревня Хацунь</p>
+            <p id="text2" class="link" onclick="openLink('Лесной.html')"><strong>2:</strong> Никольский храм в городе Клинцы</p>
+            <p id="text3" class="link" onclick="openLink('Озеро Круглое.html')"><strong>3:</strong> «Озеро Круглое и партизанский лес»</p>
+            <p id="text4" class="link" onclick="openLink('Урочище.html')"><strong>4:</strong> Урочище «Медвежьи печи»</p>
+            <p id="text5" class="link" onclick="openLink('водителям.html')"><strong>5:</strong> Памятник воинам-водителям</p>
+            <p id="text6" class="link" onclick="openLink('речечка.html')"><strong>6:</strong> Речечка</p>
+            <p id="text7" class="link" onclick="openLink('Сеща1.html')"><strong>7:</strong> Сеща</p>
+            <p id="text8" class="link" onclick="openLink('Жуковка1.html')"><strong>8:</strong> Жуковка</p>
+            <p id="text9" class="link" onclick="openLink('Белые Берега.html')"><strong>9:</strong> Белые Берега</p>
+            <p id="text10" class="link" onclick="openLink('Суземка.html')"><strong>10:</strong> Суземка</p>
+        </div>
+    </div>
+
+    <script>
+        function openLink(url) {
+            window.open(url, '_blank'); // Открывает ссылку в новой вкладке
+        }
+
+        const markers = document.querySelectorAll('.marker');
+        const tooltip = document.getElementById('tooltip');
+
+        markers.forEach(marker => {
+            marker.addEventListener('mouseenter', (event) => {
+                const info = getMarkerInfo(marker);
+                tooltip.innerHTML = info;
+                tooltip.style.display = 'block';
+                tooltip.style.top = `${event.clientY + 10}px`;
+                tooltip.style.left = `${event.clientX + 10}px`;
+            });
+
+            marker.addEventListener('mouseleave', () => {
+                tooltip.style.display = 'none';
+
+            });
+        });
+
+        function getMarkerInfo(marker) {
+            const markerId = marker.innerText;
+            switch (markerId) {
+                case '1':
+                    return `<strong></strong><br><img src="z7.jpg" alt="Image 1" style="width: 300px;"><br>Хацу́нь — деревня в Карачевском районе Брянской области.`;
+                case '2':
+                    return `<strong></strong><br><img src="10834bb.jpg" alt="Image 2" style="width: 100px;">Никольский храм в городе Клинцы<br>.`;
+                case '3':
+                    return `<strong></strong><br><img src="1336834000_ozero-krugloe-bryanskiy-rayon.jpg" alt="Image 3" style="width: 100px;"><br>«Озеро Круглое и партизанский лес».`;
+                case '4':
+                    return `<strong></strong><br><img src="20150401074620.jpg" alt="Image 4" style="width: 100px;"><br>Урочище «Медвежьи печи».`;
+                case '5':
+                    return `<strong></strong><br><img src="180.jpg" alt="Image 5" style="width: 100px;"><br>Памятник воинам-водителям.`;
+                case '6':
+                    return `<strong></strong><br><img src="84391_900.jpg" alt="Image 2" style="width: 100px;"><br>Речечка`;
+                case '7':
+                    return `<strong></strong><br><img src="162.jpg" alt="Image 3" style="width: 100px;"><br>«Cеща»`;
+                case '8':
+                    return `<strong></strong><br><img src="df1007d279d33761_FS.jpg" alt="Image 4" style="width: 100px;"><br>Жуковка.`;
+                case '9':
+                    return `<strong></strong><br><img src="30258560051249472_4d.jpg" alt="Image 2" style="width: 100px;"><br>Белые Берега.`;
+                case '10':
+                    return `<strong></strong><br><img src="суземка1.jpg" alt="Image 3" style="width: 100px;"><br>Суземка.`;
+            }
+            return '';
+        }
+
+        function highlightText(elementId) {
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.classList.add("highlight");
+            }
+        }
+
+        function unhighlightText(elementId) {
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.classList.remove("highlight");
+            }
+        }
+    </script>
+
+</body>
+</html>

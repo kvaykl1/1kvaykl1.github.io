@@ -1,0 +1,176 @@
+	<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Великая Отечественная война (ВОВ)</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background-color: #eaeaea;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #E9967A;
+            color: white;
+            padding: 15px 20px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .main-container {
+            display: flex;
+            flex: 1;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-right: 20px;
+            flex: 1;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.2s;
+        }
+        .custom-image {
+            width: 100%;
+            max-height: 80vh;
+        }
+        .marker {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: #FF5533;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .tooltip {
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            display: none;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .text-container {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Важные места в Брянской области во время Великой Отечественной войны (ВОВ)</h1>
+    </div>
+
+    <div class="main-container">
+        <div class="image-container" id="imageContainer">
+            <img src="z5.jpg" alt="Background Image" class="custom-image" id="image"> <!-- Замените на путь к вашему изображению -->
+            <div class="marker" style="top: 34%; left: 80%;" data-x="30" data-y="20" title="Перейти на страницу 1" onclick="openLink('Деревня Хацун.html')">1</div>
+            <div class="marker" style="top: 52%; left: 25%;" data-x="50" data-y="50" title="Перейти на страницу 2" onclick="openLink('Лесной.html')">2</div>
+            <div class="marker" style="top: 29%; left: 75%;" data-x="30" data-y="70" title="Перейти на страницу 3" onclick="openLink('Озеро Круглое.html ')">3</div>
+            <div class="marker" style="top: 30%; left: 78%;" data-x="30" data-y="60" title="Перейти на страницу 4" onclick="openLink('Урочище.html')">4</div>
+            <div class="marker" style="top: 35%; left: 78%;" data-x="19" data-y="30" title="Перейти на страницу 5" onclick="openLink('водителям.html')">5</div>
+            <div class="marker" style="top: 50%; left: 50%;" data-x="50" data-y="50" title="Перейти на страницу 6" onclick="openLink('Клетнянские.html')">6</div>
+            <div class="marker" style="top: 25%; left: 76%;" data-x="20" data-y="70" title="Перейти на страницу 7" onclick="openLink('Сеща1.html')">7</div>
+            <div class="marker" style="top: 20%; left: 61%;" data-x="50" data-y="50" title="Перейти на страницу 8" onclick="openLink('Жуковка1.html')">8</div>
+            <div class="marker" style="top: 30%; left: 80%;" data-x="20" data-y="70" title="Перейти на страницу 9" onclick="openLink('Белые Берега.html')">9</div>
+            <div class="marker" style="top: 70%; left: 65%;" data-x="50" data-y="50" title="Перейти на страницу 10" onclick="openLink('Суземка.html')">10</div>
+            <!-- Всплывающее окно для меток -->
+            <div class="tooltip" id="tooltip"></div>
+        </div>
+
+        <div class="text-container">
+            <h2>Места</h2>
+            <p>Великая Отечественная война — война СССР против вторгшихся на его территорию нацистской Германии и её союзников. Длилась с 22 июня 1941 по 9 мая 1945. 12
+
+В ходе войны Красная Армия разгромила вооружённые силы Германии, изгнала их из Советского Союза и освободила оккупированные Третьим рейхом страны Восточной и Центральной Европы. </p>
+            <p><strong>Метка 1:</strong> Деревня Хацунь</p>
+            <p><strong>Метка 2:</strong> Никольский храм в поселке Лесной</p>
+            <p><strong>Метка 3:</strong> «Озеро Круглое и партизанский лес»</p>
+            <p><strong>Метка 4:</strong> Урочище «Медвежьи печи»</p>
+            <p><strong>Метка 5:</strong> Памятник воинам-водителям</p>
+            <p><strong>Метка 6:</strong> Клетнянские леса </p>
+            <p><strong>Метка 7:</strong> Сеща</p>
+            <p><strong>Метка 8:</strong> Жуковка</p>
+            <p><strong>Метка 9:</strong> Белые Берега</p>
+            <p><strong>Метка 10:</strong>Суземка</p>
+        </div>
+    </div>
+
+    <script>
+        function openLink(url) {
+            window.open(url, '_blank'); // Открывает ссылку в новой вкладке
+        }
+
+        const markers = document.querySelectorAll('.marker');
+        const tooltip = document.getElementById('tooltip');
+
+        markers.forEach(marker => {
+            marker.addEventListener('mouseenter', (event) => {
+                const info = getMarkerInfo(marker);
+                tooltip.innerHTML = info;
+                tooltip.style.display = 'block';
+                tooltip.style.top = `${event.clientY + 10}px`;
+                tooltip.style.left = `${event.clientX + 10}px`;
+            });
+
+            marker.addEventListener('mouseleave', () => {
+                tooltip.style.display = 'none';
+            });
+        });
+
+        function getMarkerInfo(marker) {
+            // Здесь можно добавить информацию и изображение для каждой метки
+            const markerId = marker.innerText;
+            switch (markerId) {
+                case '1':
+                    return `<strong></strong><br><img src="z7.jpg" alt="Image 1" style="width: 3000px;"><br>Хацу́нь — деревня в Карачевском районе Брянской области.`;
+                case '2':
+                    return `<strong>Метка 2</strong><br><img src="10834bb.jpg"  alt="Image 2" style="width: 3000px;">Никольский храм в поселке Лесной<br>2.`;
+                case '3':
+                    return `<strong>Метка 3</strong><br><img src="image3.jpg" alt="Image 3" style="width: 100px;"><br>«Озеро Круглое и партизанский лес».`;
+                case '4':
+                    return `<strong>Метка 4</strong><br><img src="image4.jpg" alt="Image 4" style="width: 100px;"><br>Урочище «Медвежьи печи».`;
+                case '5':
+                    return `<strong></strong><br><img src="деревня хацунь.jpg" alt="Image 5" style="width: 100px;"><br>Памятник воинам-водителям.`;
+                case '6':
+                    return `<strong>Метка 2</strong><br><img src="image2.jpg" alt="Image 2" style="width: 100px;"><br>6.`;
+                case '7':
+                    return `<strong>Метка 3</strong><br><img src="image3.jpg" alt="Image 3" style="width: 100px;"><br>«Cеща»`;
+                case '8':
+                    return `<strong>Метка 4</strong><br><img src="image4.jpg" alt="Image 4" style="width: 100px;"><br>Жуковка.`;
+                case '9':
+                    return `<strong>Метка 2</strong><br><img src="image2.jpg" alt="Image 2" style="width: 100px;"><br>Белые Берега.`;
+                case '10':
+                    return `<strong>Метка 3</strong><br><img src="image3.jpg" alt="Image 3" style="width: 100px;"><br>Суземка.`;
+                default:
+                    return '';
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: #a73333; /* Темно-красный, символизирующий трагедию */
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    font-family: 'Lora', serif; /* заголовок */
+}
+
+.header-content {
+    width: 80%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header .subtitle {
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: 'Lora', serif;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #555; /* Более приглушенный цвет , текст*/
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.village-image, .memorial-image {
+    width: 100%;
+    max-width: 600px; /* Ограничение ширины изображения */
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px; /* Скругление углов изображения */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Тень для изображения */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Медиа-запрос для адаптивности (например, для мобильных устройств) */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    header {
+        padding: 30px 0;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+}
