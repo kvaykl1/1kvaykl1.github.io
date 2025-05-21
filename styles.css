@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #160818;
+  color: white;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+#classSelect {
+  
+  transition: 0.5s;
+  background-color: #561e5f;
+  color: white;
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  appearance: none;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+#classSelect:focus{
+  scale: 1.05;
+  background-color: #8a4495;
+  
+}
+
+.day-schedule {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #64236f;
+  border-radius: 5px;
+}
+
+h3 {
+  margin: 0;
+}
+
+.lessons-list {
+  color: #F7EBF9;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.lesson-item {
+  color: #E7C5EC;
+  background-color: #4f1c57;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 4px;
+}
+
+
+#time {
+  margin-top: 45px;
+  display: flex; /* Включаем Flexbox */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Располагаем элементы в столбик */
+  background-color: #7A2B87; /* Фон для блока времени */
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bolder;
+
+}
+
+#time span {
+  width: 85%;
+  text-align: center;
+  background-color: #571F60; /* Фон для каждого урока */
+  color: #E7C5EC; /* Цвет текста */
+  padding: 8px;
+  margin: 5px 0; /* Отступы между уроками */
+  border-radius: 4px; /* Скругление углов */
+}
